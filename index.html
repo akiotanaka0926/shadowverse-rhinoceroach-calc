@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>リノ算！</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="imgInput">
+    基本情報<br />
+    <label for="inputfile">
+      <img src="img/noimage.png" alt="no image" class="imgView">
+    </label>
+    <br />
+    <input type="file" name="file1" id="inputfile">
+    <br />
+    <br /> 最大PP : <input type="number" min="1" max="10" value="7" id="max_pp">
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="play_costs">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- 大枠 -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1">
+              残りPP ： <span id="remiaing_pp">7</span>
+            </div>
+            <div class="col-md-1">
+              プレイ枚数 ： <span id="playing_count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="play_cards">
+    <table id="cards"></table>
+    </span>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- 大枠 -->
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-1.5 cost">
+            <div class="box">
+              0コスト
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 0, "name":"フェアリーウィスプ"}'>フェアリーウィスプ</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 0, "name":"フェアリー"}'>フェアリー</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 0, "name":"ミニゴブリンメイジ"}'>ミニゴブリンメイジ</button>
+            </div>
+          </div>
+          <div class="col-md-1.5 cost">
+            <div class="box">
+              1コスト
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"フェアリー"}'>フェアリー</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"自然の導き"}'>自然の導き</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"対空射撃"}'>対空射撃</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"フェアリーサークル"}'>フェアリーサークル</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"炎精の森"}'>炎精の森</button>
+            </div>
+          </div>
+          <div class="col-md-1.5 cost">
+            <div class="box">
+              2コスト
+              <button type="button" class="btn btn-danger btn-block play" data-info='{"cost": 2, "name":"リノセウス"}'>リノセウス</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"森荒らしへの報い"}'>森荒らしへの報い</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"茨の森"}'>茨の森</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"妖精花"}'>妖精花</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"妖精のいたずら"}'>妖精のいたずら</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"エルフの少女・リザ"}'>エルフの少女・リザ</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"愛の妖精・ポーラ"}'>愛の妖精・ポーラ</button>
+            </div>
+          </div>
+          <div class="col-md-1.5 cost">
+            <div class="box">
+              3コスト
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 3, "name":"ミニゴブリンメイジ"}'>ミニゴブリンメイジ</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 3, "name":"エンシェントエルフ"}'>エンシェントエルフ</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 3, "name":"バッタの指揮者"}'>バッタの指揮者</button>
+            </div>
+          </div>
+          <div class="col-md-1.5 cost">
+            <div class="box">
+              4コスト
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 4, "name":"導きの妖精姫・アリア"}'>導きの妖精姫・アリア</button>
+              <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 4, "name":"エルフプリンセスメイジ"}'>エルフプリンセスメイジ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 大枠 -->
+    </div>
+  </div>
+
+</body>
+
+</html>

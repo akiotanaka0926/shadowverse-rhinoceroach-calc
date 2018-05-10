@@ -1,0 +1,29 @@
+.imgView {
+
+}
+
+.imgInput {
+  border: 1px solid #aaa;
+  padding: 20px 40px;
+  margin: 30px 30px;
+}
+
+.spacing {
+  height: 10px;
+}
+
+.play_cards {
+  padding: 20px 40px;
+}
+
+.play_costs {
+  padding: 10px 20px;
+}
+
+.cost {
+  text-align:center;
+}
+
+.box {
+  padding : 5px ;
+}
