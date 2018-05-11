@@ -33,10 +33,13 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-1">
-              残りPP ： <span id="remiaing_pp">7</span>
+              残りPP ： <span id="remaining_pp">7</span>
             </div>
             <div class="col-md-1">
               プレイ枚数 ： <span id="playing_count">0</span>
+            </div>
+            <div class="col-md-1">
+              ダメージ ： <span id="damage">0</span>
             </div>
           </div>
         </div>
@@ -45,8 +48,14 @@
   </div>
 
   <div class="play_cards">
-    <table id="cards"></table>
-    </span>
+    <table id="cards">
+      <tbody>
+        <tr id="row1"> </tr>
+        <tr id="row2"> </tr>
+      </tbody>
+    </table>
+    <hr>
+    <span id="casual_costs"></span>
   </div>
 
   <div class="spacing"></div>
@@ -56,7 +65,10 @@
       <!-- 大枠 -->
       <div class="col-md-12">
         <div class="row">
-          <div class="col-md-1.5 cost">
+          <div class="col-md-1 cost">
+            <!--位置調整用-->
+          </div>
+          <div class="cost">
             <div class="box">
               0コスト
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 0, "name":"フェアリーウィスプ"}'>フェアリーウィスプ</button>
@@ -64,7 +76,7 @@
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 0, "name":"ミニゴブリンメイジ"}'>ミニゴブリンメイジ</button>
             </div>
           </div>
-          <div class="col-md-1.5 cost">
+          <div class="cost">
             <div class="box">
               1コスト
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"フェアリー"}'>フェアリー</button>
@@ -74,7 +86,7 @@
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 1, "name":"炎精の森"}'>炎精の森</button>
             </div>
           </div>
-          <div class="col-md-1.5 cost">
+          <div class="cost">
             <div class="box">
               2コスト
               <button type="button" class="btn btn-danger btn-block play" data-info='{"cost": 2, "name":"リノセウス"}'>リノセウス</button>
@@ -86,7 +98,7 @@
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 2, "name":"愛の妖精・ポーラ"}'>愛の妖精・ポーラ</button>
             </div>
           </div>
-          <div class="col-md-1.5 cost">
+          <div class="cost">
             <div class="box">
               3コスト
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 3, "name":"ミニゴブリンメイジ"}'>ミニゴブリンメイジ</button>
@@ -94,11 +106,18 @@
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 3, "name":"バッタの指揮者"}'>バッタの指揮者</button>
             </div>
           </div>
-          <div class="col-md-1.5 cost">
+          <div class="cost">
             <div class="box">
               4コスト
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 4, "name":"導きの妖精姫・アリア"}'>導きの妖精姫・アリア</button>
               <button type="button" class="btn btn-success btn-block play" data-info='{"cost": 4, "name":"エルフプリンセスメイジ"}'>エルフプリンセスメイジ</button>
+            </div>
+          </div>
+          <div class="cost">
+            <div class="box">
+              オプション
+              <button type="button" class="btn btn-primary btn-block" id="prev_button">１手戻す</button>
+              <button type="button" class="btn btn-primary btn-block" id="reset_button">リセット</button>
             </div>
           </div>
         </div>
