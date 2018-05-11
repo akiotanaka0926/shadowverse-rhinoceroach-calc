@@ -1,11 +1,11 @@
 .imgView {
-
+  width : 100%;
 }
 
 .imgInput {
   border: 1px solid #aaa;
   padding: 20px 40px;
-  margin: 30px 30px;
+  margin: 20px 30px;
 }
 
 .spacing {
